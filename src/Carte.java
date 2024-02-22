@@ -1,5 +1,4 @@
 
-
 public class Carte {
 
    
@@ -32,10 +31,9 @@ public class Carte {
    
 
    @Override
-   public String toString() {
-       // TODO Auto-generated method stub
-       return couleur.getNom()+valeur.getNom();
-   }
+        public String toString(){
+           return "["+this.valeur.getNom()+"|"+this.couleur.getNom()+"] ==> "+this.valeur.getValeur();
+        }
    
 
    

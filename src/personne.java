@@ -1,20 +1,20 @@
-public class personne {
-private int main;
+public class Personne {
+    public Main main;
+    
+    public Personne(){
+      this.main=new Main();
+    }
 
+    public Main getMain() {
+        return main;
+    }
+    
 
-public void setMain(int nvMain){
-    nvMain=main;
-}
-public int getMain(){
-    return main;
-}
-public personne(int main){
-    this.main=main;
-}
-public void voirCartes(){};
-public void hit(){};
+    public void  tirerCarte(PaquetCartes paquet){
 
-
+    }
+     public void  voirCartes(){
+        
+     }
     
 }
-
