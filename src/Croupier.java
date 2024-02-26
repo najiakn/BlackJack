@@ -1,4 +1,4 @@
-public class Croupier extends Personne{
+public class Croupier extends Personne implements CroupierInterface{
     
     private int valeurTotalLimit;
     private boolean carteCasheeRelevee;
@@ -8,13 +8,14 @@ public class Croupier extends Personne{
         super();
         this.valeurTotalLimit=valeurTotalLimit;
     }
-    
+    @Override
     public void distribuerCartes(Joueur joueur, PaquetCartes paquet){
        joueur.recevoirCartes(paquet.tirerCarte(), paquet.tirerCarte());
        main.ajouterCarte(paquet.tirerCarte());
        main.ajouterCarte(paquet.tirerCarte());
     }
     
+    @Override
     public void releverCarteCashe(){
         main.calculerValeurMain();
         System.out.println("le croupier expose sa main cashé");
@@ -33,6 +34,7 @@ public class Croupier extends Personne{
         }
     }
     
+    @Override
     public void  comparerMains(Joueur joueur){
        
        int valeurMainJoueur = joueur.getMain().calculerValeurMain();

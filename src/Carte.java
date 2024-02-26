@@ -1,5 +1,5 @@
 
-public class Carte {
+public class Carte implements CarteInterface {
 
    
    private Valeur valeur;
@@ -12,18 +12,21 @@ public class Carte {
     
   
      }
+     @Override
    public void setCouleur(Couleur couleur){
     this.couleur= couleur;
    }
-    
+    @Override
    public Couleur getCouleur(){
     return couleur;
    }
+   @Override
    public void setValeur(Valeur valeur){
 
     this.valeur=valeur;
 
    }
+   @Override
    public Valeur getValeur(){
     return valeur;
    }
